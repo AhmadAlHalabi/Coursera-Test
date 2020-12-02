@@ -95,7 +95,6 @@ $ajaxUtils.sendGetRequest(
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
   
-alert("buildAndShowHomeHTML" + categories);
   
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
