@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 // On first load, show home view
 showLoading("#main-content");
 
- alert("After Show Loading " + categories);
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   buildAndShowHomeHTML
@@ -95,6 +94,7 @@ $ajaxUtils.sendGetRequest(
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
   
+ console.log(categories);
   
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
