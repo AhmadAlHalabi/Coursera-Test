@@ -2,12 +2,10 @@
 'use strict';
 
 
-
-
 var toBuyList = [
-	{ name: "beers", quantity: 20 },
+	{ name: "orange", quantity: 15 },
 	{ name: "cookies", quantity: 10 },
-	{ name: "olives", quantity: 30 },
+	{ name: "chips", quantity: 20 },
 	{ name: "pizzas", quantity: 2 },
 	{ name: "snacks", quantity: 5 }
 ];
@@ -21,14 +19,18 @@ angular.module('ShoppingListCheckOff', [])
 .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
 
+
+
 ToBuyController.$inject = ['ShoppingListCheckOffService'];
 function ToBuyController(ShoppingListCheckOffService) {
   var toBuyCtrl = this;
   toBuyCtrl.items = ShoppingListCheckOffService.getItemsToBuy();
+
   toBuyCtrl.bought = function (index) {
     ShoppingListCheckOffService.buyItem(index);
   };
 }
+
 
 AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtController(ShoppingListCheckOffService) {
@@ -36,9 +38,19 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
   boughtCtrl.items = ShoppingListCheckOffService.getBougthItems();
 }
 
+
+
+
+
+
 function ShoppingListCheckOffService() {
   var service = this;
   
+  /* Global List
+  var toBuyList = [];
+  var boughtList = [];
+ */
+
   // List of shopping items to buy
   var itemsToBuy = toBuyList;
   // List of shopping items bought
