@@ -1,5 +1,4 @@
 
-
 (function () {
 'use strict';
 
@@ -45,8 +44,10 @@ function NarrowItDownController(MenuSearchService) {
 	//Search only when searchTerm is not empty
 	if (searchTerm) {
 		var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
+	
 		promise.then(function (response) {
 		  narrowItCtrl.found = response;
+		
 		})
 		.catch(function (error) {
 		  console.log(error);
@@ -83,6 +84,7 @@ function MenuSearchService($http, ApiBasePath) {
       method: "GET",
       url: (ApiBasePath + "/menu_items.json")
     }).then(function (response) {
+     
 		//Filtering the response items by searchTerm
 		var foundItems = [];
 		var menuItemsLength = response.data.menu_items.length;
