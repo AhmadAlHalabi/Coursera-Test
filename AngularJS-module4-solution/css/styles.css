@@ -1,0 +1,26 @@
+body {
+  font-size: 1.2em;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+ul {
+  max-height: 230px;
+  /* overflow-y: scroll; */
+}
+
+a[ui-sref]
+{
+
+}
+
+
+li[ui-sref]:hover {
+  font-weight: bold;
+  cursor: pointer;
+
+}
