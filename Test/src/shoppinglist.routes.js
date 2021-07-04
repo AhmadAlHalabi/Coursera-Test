@@ -37,7 +37,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     url: '/item-detail/{itemId}',
     templateUrl: 'src/3_Item/item-detail.template.html',
     controller: "ItemDetailController as itemDetail"
-  });
+  });	
 
 }
 

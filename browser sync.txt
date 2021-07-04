@@ -1,0 +1,7 @@
+C:\Users\Ahmad\Coursera-Test\
+C:\Users\Ahmad\Coursera-Test\site
+C:\Users\Ahmad\Coursera-Test\Test
+
+browser-sync start --server --files "*"
+
+

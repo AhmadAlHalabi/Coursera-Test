@@ -11,6 +11,4 @@ function MainShoppingListController(ShoppingListService, items) {
   mainlist.items = items;
 }
 
-
-
 })();

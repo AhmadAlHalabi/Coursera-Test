@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" class="carCol">id</th>
+      <th scope="col" class="carCol">name</th>
+      <th scope="col" class="carCol">quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="car in $ctrl.cars | filter: $ctrl.filter"  >
+      <td ui-sref="main.carDescription({id: $index +1})" >{{ car.id }} </td>
+      <td >{{ car.name }}     </td>
+      <td>{{ car.quantity }} </td>
+
+      <td> <button ng-click="$ctrl.removeCar($index);">Remove car</button></td>
+    </tr>
+
+
+    </tbody>
+
+</table>
+<ui-view></ui-view>

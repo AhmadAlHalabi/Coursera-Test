@@ -1,0 +1,17 @@
+<div class="container">
+<a ui-sref="home">home</a> \ main
+
+<input type="text" ng-model="filterCar" class="search" placeholder="search..">
+
+<p>
+
+<input type="text" class="newCar"  ng-model="mainCtrl.cars.name"         placeholder="Add new car..">
+<input type="text" class="newCar"  ng-model="mainCtrl.cars.quantity"     placeholder="Add new car quantity..">
+<input type="text" class="newCar"  ng-model="mainCtrl.cars.description"  placeholder="Add new car description..">
+<button ng-click="mainCtrl.addNewCar()">+</button>
+
+</p>
+
+<cars-List cars="mainCtrl.cars" filter=filterCar ></cars-List>
+
+</div>

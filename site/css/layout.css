@@ -1,0 +1,53 @@
+.appHeader {
+  text-align: center;
+  align: center;
+}
+
+[ui-view].ng-enter {
+   animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-size: 20px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+li[ui-sref]:hover {
+  display: inline-block;
+  cursor: pointer;
+  border: solid black 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.search {
+  height: 20px;
+  position:absolute;
+  right:110px;
+  }
+
+  .newCar{
+    width: 220px;
+  }
